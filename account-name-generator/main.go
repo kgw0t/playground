@@ -7,8 +7,11 @@ import (
 )
 
 func main() {
-	for i := 0; i < 100; i++ {
-		generate()
+	for i := 0; i < 10; i++ {
+		for j := 0; j < 10; j++ {
+			generate()
+		}
+		fmt.Println()
 	}
 }
 
@@ -27,5 +30,5 @@ func generate() {
 		point := rand.Intn(len(target))
 		fmt.Print(target[point : point+1])
 	}
-	fmt.Println()
+	fmt.Print(" ")
 }
